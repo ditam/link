@@ -14,8 +14,8 @@
     if (window.location.search === '') {
       console.log('No search params.');
     } else {
-      const target = links[window.location.search];
-      console.log('Redirection:', window.location.search, '->', target);
+      const target = links[window.location.search.substring(1)];
+      console.log('Redirection:', window.location.search.substring(1), '->', target);
       window.location.href = target;
     }
   </script>
