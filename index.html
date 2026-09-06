@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Links</title>
+</head>
+<body>
+  No content for now.
+  <script>
+    const links = {
+      'boxA1': 'https://telex.hu'
+    };
+    console.log('parsing...');
+    if (window.location.search === '') {
+      console.log('No search params.');
+    } else {
+      const target = links[window.location.search];
+      console.log('Redirection:', window.location.search, '->', target);
+      window.location.href = target;
+    }
+  </script>
+</body>
+</html>
